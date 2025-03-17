@@ -120,17 +120,8 @@ E:
 */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    // turn string to lowercase
-    string.toLowerCase();
-    // turn char to lowercase
-    char.toLowerCase();
-    // if statement to compare string value with char
-    if (string[0] === char) {
-        return true;
-    } else {
-        return false;
-    }
+    // 
+    
 
     // YOUR CODE ABOVE HERE //
 }
