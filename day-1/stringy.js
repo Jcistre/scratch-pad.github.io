@@ -12,10 +12,17 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
+/*
+I: string value
+O: length of string
+C:
+E:
+*/
 function length(string) {
     // YOUR CODE BELOW HERE //
 
-
+    // return string.length
+    return string.length;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -25,10 +32,18 @@ function length(string) {
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+/*
+I: string value
+O: lowercase the string value
+C:
+E:
+*/
+
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
    
-
+    // return the lowercase string value
+    return string.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -36,10 +51,18 @@ function toLowerCase(string) {
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+
+/*
+I: string value
+O: uppercase string value
+C:
+E:
+*/
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+    // return uppercase string value
+    return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -57,11 +80,23 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+
+/*
+I: string value
+O: dash-cased string value
+C:
+E:
+*/
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    // array to store splitStr
+    var splitStr = [];
+    // lowercase the string value
+    var lowercase = string.toLowerCase();
+    // split string
+    splitStr = lowercase.split(' ');
+    // join and return the string
+    return splitStr.join('-');
     // YOUR CODE ABOVE HERE //
 }
 
@@ -77,10 +112,25 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: a string and a letter to check first letter
+O: a boolean true or false
+C:
+E:
+*/
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-    
+    // turn string to lowercase
+    string.toLowerCase();
+    // turn char to lowercase
+    char.toLowerCase();
+    // if statement to compare string value with char
+    if (string[0] === char) {
+        return true;
+    } else {
+        return false;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -97,9 +147,25 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: a string value and a character to check last letter
+O: true or false 
+C:
+E:
+*/
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
+    // string to lowercase
+    string.toLowerCase();
+    // char to lowercase
+    char.toLowerCase();
+    // if statement to chack last letter in string
+    if (string[string.length - 1] === char) {
+        return true
+    } else {
+        return false;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -110,10 +176,17 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+/*
+I: two string valuse
+O: concated string
+C:
+E:
+*/
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    //concat the string values and return string
+    return stringOne.concat(stringTwo);
 
     // YOUR CODE ABOVE HERE //
 }
@@ -128,11 +201,21 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+/*
+I: x amount of string values
+O: all string values joined together
+C:
+E:
+*/
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-
+    // push stringOne values into args
+    args.push(stringOne);
+    // push stringTwo values into args
+    args.push(stringTwo);
+    // return joined args
+    return args.join();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -145,11 +228,24 @@ function join(stringOne, stringTwo) {
  *
  * TIP: What property of the String do we need to compare?
  */
+/*
+I: two strings
+O: the longest of the two strings
+C:
+E:
+*/
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+    // stringOne value
+    var a = stringOne.length
+    //stringTwo value
+    var b = stringTwo.length
+    // if statment to compare string lengths
+    if (a > b) {
+        return stringOne
+    } else {
+        return stringTwo
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -160,9 +256,24 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I: two strings to compare alphabetically
+O: 1, -1, or 0
+C:
+E:
+*/
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // if statement to compare if stringOne is greater than stringTwo
+    if (stringOne > stringTwo) {
+        return -1;
+    // else if statement to compare if stringTwo is less than stringOne
+    } else if (stringOne < stringTwo) {
+        return 1;
+    // else return 0 if both are equal
+    } else {
+        return 0;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -174,12 +285,24 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I: two strings to compare alphabetically
+O: 1, -1, 0
+C:
+E:
+*/
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
-
+// if statement to compare if stringTwo is greater than stringOne
+if (stringOne < stringTwo) {
+    return -1;
+// else if statement to compare if stringOne is less than stringTwo
+} else if (stringOne > stringTwo) {
+    return 1;
+// else return 0 if both are equal
+} else {
+    return 0;
+}
     // YOUR CODE ABOVE HERE //
 }
 
