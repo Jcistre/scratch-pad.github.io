@@ -38,7 +38,6 @@ O: lowercase the string value
 C:
 E:
 */
-
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
    
@@ -120,11 +119,16 @@ E:
 */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    // 
-    
-
+        // if statement to compare values
+        if (string[0].toLowerCase() === char.toLowerCase()) {
+        // return true if same
+            return true;
+        } else {
+        //return false if not
+            return false;
+        }
     // YOUR CODE ABOVE HERE //
-}
+    }
 
 /**
  * Given an input String and a single character, return true if the String
@@ -146,19 +150,14 @@ E:
 */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    // string to lowercase
-    string.toLowerCase();
-    // char to lowercase
-    char.toLowerCase();
-    // if statement to chack last letter in string
-    if (string[string.length - 1] === char) {
-        return true
-    } else {
-        return false;
-    }
-
-
+    // if statement to compare values
+    if (string[string.length - 1].toLowerCase() === char.toLowerCase()) {
+        // return true if same
+            return true;
+        } else {
+        //return false if not
+            return false;
+        }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -201,12 +200,8 @@ E:
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-    // push stringOne values into args
-    args.push(stringOne);
-    // push stringTwo values into args
-    args.push(stringTwo);
-    // return joined args
-    return args.join();
+    // concat strings together
+    return args.join("");
     // YOUR CODE ABOVE HERE //
 }
 
