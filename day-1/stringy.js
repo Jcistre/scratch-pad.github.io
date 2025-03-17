@@ -36,11 +36,15 @@ function length(string) {
 I: string value
 O: lowercase the string value
 C:
-E:
+E: if string is empty return null
 */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-   
+    // if string is empty
+    if (string === "") {
+    // return null
+        return null;
+    }
     // return the lowercase string value
     return string.toLowerCase();
 
