@@ -21,12 +21,27 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+/*
+I: two integers which are numbers
+O: an array containing all integers between the two numbers
+E: if first integer is greater than second, should do it in reverse
+*/
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    // output array
+    var output = [];
+    // if start is greater than end, decrement the numbers
+    if (start > end) {
+        for (var i = start; i >= end; i--) {
+            output.push(i);
+        }
+        // else increment from start to end
+    } else {
+        for (var j = start; j <= end; j++) {
+            output.push(j);
+        }
+    }
+    return output;
     // YOUR CODE GOES ABOVE HERE //
 }
 
