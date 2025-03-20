@@ -35,7 +35,11 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    }
 } 
 
 
@@ -48,7 +52,45 @@ function makeContactList() {
     
     return {
         // we implemented the length api for you //
-       
+       length: function(){
+        return contacts.length;
+       },
+       addContact: function(contact) {
+        contacts.push(contact);
+       },
+       findContact: function(fullName) {
+        for (var i = 0; i < contacts.length; i++) {
+            if (contacts[i].nameFirst + " " + contacts[i].nameLast === fullName) {
+                return contacts[i];
+        } else {
+            return undefined;
+        }
+        }
+       },
+       removeContact: function(contact) {
+        // for loop to iterate over array    
+        for (var i = 0; i < contacts.length; i++) {
+            // if contact matches with contacts list    
+            if (contacts[i].id === contact.id) {
+                contacts.splice(contacts[i], 1);
+                }
+            }
+       },
+       printAllContactNames: function(){
+        // output variable
+        var output = '';
+        // fullName variable
+        var fullName = '';
+        // for loop to iterate over array
+        for (var i = 0; i < contacts.length; i++) {
+            // assign full names into fullName
+            fullName = contacts[i].nameFirst + " " + contacts[i].nameLast
+            // concat strings into output variable
+            output.concat(`${fullName}\n`)
+            // return output
+            }
+            return output;
+       }
     }
 }
 
