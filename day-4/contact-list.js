@@ -78,18 +78,15 @@ function makeContactList() {
        },
        printAllContactNames: function(){
         // output variable
-        var output = '';
+        var output = [];
         // fullName variable
-        var fullName = '';
+        var fullName = [];
         // for loop to iterate over array
         for (var i = 0; i < contacts.length; i++) {
             // assign full names into fullName
-            fullName = contacts[i].nameFirst + " " + contacts[i].nameLast
-            // concat strings into output variable
-            output.concat(`${fullName}\n`)
+            output.push(contacts[i].nameFirst + " " + contacts[i].nameLast)
             // return output
-            }
-            return output;
+            } return output.join(`\n`);
        }
     }
 }
