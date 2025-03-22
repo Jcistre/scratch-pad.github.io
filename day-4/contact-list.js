@@ -79,8 +79,6 @@ function makeContactList() {
        printAllContactNames: function(){
         // output variable
         var output = [];
-        // fullName variable
-        var fullName = [];
         // for loop to iterate over array
         for (var i = 0; i < contacts.length; i++) {
             // assign full names into fullName
